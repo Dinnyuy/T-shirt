@@ -20,4 +20,4 @@ Preserve all form field names and the `apparel-interest-registration` form name.
 
 Submissions use an actual URL-encoded POST to `/`; navigate to `/thank-you` only after an OK response. Keep native POST fallback, honeypot, required contact consent and separately optional unchecked marketing consent. Never simulate success or persist leads in browser storage. Data storage is Netlify Forms; no separate database is required.
 
-Use Netlify Image CDN URLs for generated bitmap assets. Maintain concept labels until owners approve actual product photography. Never invent prices, stock, reviews, delivery coverage or production timelines. Unconfigured external contacts are plain placeholders, not fake anchors.
+ Maintain concept labels until owners approve actual product photography. Never invent prices, stock, reviews, delivery coverage or production timelines. Unconfigured external contacts are plain placeholders, not fake anchors.

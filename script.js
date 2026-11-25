@@ -3,6 +3,16 @@
   let language = 'en';
   let currentStep = 0;
   let left99Variant = 'sweatshirt';
+  const isLocalPreview = ['localhost', '127.0.0.1'].includes(location.hostname);
+
+  function resolveImageSource(source, width = '850') {
+    if (!source || isLocalPreview || !source.startsWith('/img/')) return source;
+    return `/.netlify/images?url=${source}&w=${width}&fm=webp`;
+  }
+
+  document.querySelectorAll('img[data-cdn-width]').forEach(img => {
+    img.src = resolveImageSource(img.getAttribute('src'), img.dataset.cdnWidth);
+  });
 
   const form = document.querySelector('#interest-form');
   const steps = [...document.querySelectorAll('.form-step')];
@@ -148,7 +158,7 @@
     left99Card.querySelectorAll('.garment-switch button').forEach(btn => {
       btn.addEventListener('click', () => {
         left99Variant = btn.dataset.variant;
-        left99Img.src = left99Img.dataset[left99Variant];
+        left99Img.src = resolveImageSource(left99Img.dataset[left99Variant], left99Img.dataset.cdnWidth);
         left99Card.querySelectorAll('.garment-switch button').forEach(b => {
           const active = b === btn;
           b.classList.toggle('is-active', active);

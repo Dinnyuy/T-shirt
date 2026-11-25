@@ -1,10 +1,10 @@
 :root {
-  --cream: #f7f4ee;
-  --ink: #191919;
-  --muted: #6d6a63;
-  --line: #dcd8cf;
-  --blush: #dfa3b8;
-  --gold: #b69b70;
+  --cream: #080808;
+  --ink: #fff;
+  --muted: #e2ded6;
+  --line: #45413a;
+  --gold: #c8b895;
+  --beige: #c8b895;
   --serif: 'Playfair Display', Georgia, serif;
   --sans: 'DM Sans', sans-serif;
 }
@@ -23,7 +23,7 @@ body {
   background: var(--cream);
   color: var(--ink);
   font-family: var(--sans);
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.7;
 }
 
@@ -115,7 +115,7 @@ button {
 }
 
 ::selection {
-  background: #e5c6b0;
+  background: var(--beige);
 }
 
 .skip {
@@ -160,7 +160,7 @@ header {
   padding: 24px 4%;
   gap: 25px;
   border-bottom: 1px solid var(--line);
-  background: rgba(247, 244, 238, 0.97);
+  background: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(16px);
 }
 
@@ -240,7 +240,7 @@ nav a:hover,
 }
 
 .button.light:hover {
-  background: #e8ddcc;
+  background: var(--beige);
 }
 
 .text-link {
@@ -301,7 +301,7 @@ nav a:hover,
 }
 
 .hero h1 em {
-  color: #8c7051;
+  color: var(--gold);
 }
 
 .hero-copy > p {
@@ -393,7 +393,7 @@ nav a:hover,
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: rgba(247, 244, 238, 0.9);
+  background: rgba(255, 255, 255, 0.9);
   color: var(--ink);
   display: grid;
   place-items: center;
@@ -412,7 +412,7 @@ nav a:hover,
   bottom: 28px;
   left: 27px;
   z-index: 2;
-  background: rgba(247, 244, 238, 0.95);
+  background: rgba(255, 255, 255, 0.95);
   padding: 18px 25px;
   font-family: var(--serif);
   font-size: 23px;
@@ -425,7 +425,7 @@ nav a:hover,
   align-items: center;
   justify-content: space-evenly;
   gap: 20px;
-  background: #eee8dd;
+  background: var(--beige);
   padding: 19px 4%;
   font-size: 9px;
   letter-spacing: 2px;
@@ -655,7 +655,7 @@ nav a:hover,
   left: 14px;
   font-size: 8px;
   letter-spacing: 1px;
-  background: rgba(247, 244, 238, 0.94);
+  background: rgba(255, 255, 255, 0.94);
   padding: 5px 10px;
 }
 
@@ -675,7 +675,7 @@ nav a:hover,
   left: 14px;
   display: flex;
   gap: 4px;
-  background: rgba(247, 244, 238, 0.94);
+  background: rgba(255, 255, 255, 0.94);
   padding: 3px;
   border: 1px solid #cfc8bb;
 }
@@ -713,7 +713,7 @@ nav a:hover,
 .swatches i {
   width: 11px;
   height: 11px;
-  background: var(--swatch, #f7f4ee);
+  background: var(--swatch, #fff);
   border: 1px solid var(--ring, #b9b0a4);
   border-radius: 50%;
 }
@@ -1248,7 +1248,7 @@ details p {
 /* Closing & Footer */
 .closing {
   padding: 62px 6%;
-  background: #dfc6ba;
+  background: var(--beige);
   text-align: center;
 }
 
@@ -1268,7 +1268,7 @@ details p {
 
 footer {
   padding: 54px 6% 18px;
-  background: #eae5db;
+  background: var(--beige);
 }
 
 .footer-top {
@@ -2024,4 +2024,180 @@ footer {
     animation: none !important;
     transition: none !important;
   }
+}
+
+/* Use high-contrast colors and comfortable type sizes across breakpoints. */
+body,
+.announcement,
+header,
+.featured,
+.register,
+.custom-section,
+form {
+  background-color: #080808;
+}
+
+header {
+  background-color: rgba(8, 8, 8, 0.97);
+}
+
+.announcement,
+header,
+.custom-section,
+form {
+  color: #fff;
+}
+
+.button {
+  background: #fff;
+  color: #080808;
+  border-color: #fff;
+}
+
+.button:hover,
+.button.light:hover {
+  background: var(--beige);
+  color: #080808;
+}
+
+.button.light {
+  background: transparent;
+  color: #fff;
+  border-color: #fff;
+}
+
+.skip {
+  background: var(--beige);
+  color: #080808;
+}
+
+.manifesto-strip {
+  background: var(--beige);
+  color: #080808;
+}
+
+.manifesto-strip i {
+  color: #080808;
+}
+
+h2,
+h3,
+.conditional legend,
+.step-number,
+.registration-note > span {
+  color: var(--beige);
+}
+
+.closing {
+  background: #fff;
+  color: #080808;
+}
+
+.closing h2,
+.closing p {
+  color: #080808;
+}
+
+footer {
+  background: #080808;
+  color: #fff;
+}
+
+footer h2,
+footer h3,
+footer p,
+footer .footer-top .eyebrow,
+footer .footer-bottom,
+footer .socials > div {
+  color: #fff;
+}
+
+.choice:has(input:checked),
+.design-choice:has(input:checked),
+.request-summary {
+  background: var(--beige);
+  color: #080808;
+}
+
+.form-progress {
+  color: #dedad2;
+}
+
+.form-progress .active {
+  color: #fff;
+}
+
+.section-heading .eyebrow,
+.about > .eyebrow,
+.registration-intro .eyebrow,
+.thank-you > .eyebrow,
+.custom-copy .eyebrow,
+.footer-top .eyebrow {
+  color: var(--beige);
+}
+
+nav {
+  font-size: 15px;
+}
+
+.hero-copy > p,
+.section-heading > p,
+.category-extras p,
+.product p,
+.custom-copy > p,
+.steps p,
+.about > p,
+.registration-intro > p,
+.registration-note p,
+.faq > div > p,
+details p,
+.thank-you > p,
+.footer-top p,
+.privacy p {
+  font-size: 17px;
+}
+
+.category-caption p,
+.product-meta,
+.fine-print,
+.custom-copy li,
+.signature,
+.footer-nav,
+.socials > div,
+.footer-bottom,
+.hero-foot,
+.field,
+legend,
+.choice,
+.check,
+.design-choice,
+.form-progress,
+.faq summary,
+.privacy summary {
+  font-size: 15px;
+}
+
+.button,
+.text-link,
+.filter-btn,
+.product-actions .button,
+.closing .button,
+.nav-actions > .button,
+.hero-buttons .text-link {
+  font-size: 15px;
+}
+
+.button.small,
+.product-actions .button {
+  font-size: 14px;
+}
+
+.eyebrow {
+  font-size: 13px;
+}
+
+.field input,
+.field select,
+.field textarea {
+  font-size: 17px;
 }
